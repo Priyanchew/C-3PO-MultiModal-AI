@@ -4,16 +4,16 @@ import { useState } from 'react';
 
 const focusModes = [
     {
-        key: 'webSearch',
-        title: 'All',
-        description: 'Searches across all of the internet',
-        link: '/',
+        key: 'EditVideo',
+        title: 'Edit Video',
+        description: 'Edit Video By Editing Text',
+        link: 'https://radames-edit-video-by-editing-text.hf.space',
     },
     {
-        key: 'academicSearch',
-        title: 'Academic',
-        description: 'Search in published academic papers',
-        link: 'https://huggingface.co/spaces/multimodalart/stable-video-diffusion',
+        key: 'videoDiffusion',
+        title: 'Stable Video Diffusion',
+        description: 'Generate videos from text',
+        link: 'https://multimodalart-stable-video-diffusion.hf.space',
     },
     {
         key: 'YTvideoToAudio',
@@ -22,15 +22,15 @@ const focusModes = [
         link: 'https://pierreguillou-video-to-audio.hf.space',
     },
     {
-        key: 'wolframAlphaSearch',
-        title: 'Wolfram Alpha',
-        description: 'Computational knowledge engine',
-        link: '/music',
+        key: 'pix2pixDiffusion',
+        title: 'Pix2Pix Diffusion',
+        description: 'Apply Instruct Pix2Pix Diffusion to a video',
+        link: 'https://fffiloni-pix2pix-video.hf.space',
     },
     {
-        key: 'youtubeSearch',
-        title: 'Youtube',
-        description: 'Search and watch videos',
+        key: 'removeVideoBackground',
+        title: 'Remove Video Bg',
+        description: 'Removes video background',
         link: 'https://amirgame197-remove-video-background.hf.space',
     },
 ];
@@ -68,7 +68,7 @@ const Page = () => {
                 <iframe
                     src={currentLink}
                     width="100%"
-                    height="950"
+                    height="961"
                 ></iframe>
             </div>
         </>

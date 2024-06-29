@@ -215,30 +215,7 @@ const SettingsDialog = ({
                       </p>
                       <ThemeSwitcher />
                     </div>
-                    {config.chatModelProviders && (
-                      <div className="flex flex-col space-y-1">
-                        <p className="text-black/70 dark:text-white/70 text-sm">
-                          Chat model Provider
-                        </p>
-                        <Select
-                          value={selectedChatModelProvider ?? undefined}
-                          onChange={(e) => {
-                            setSelectedChatModelProvider(e.target.value);
-                            setSelectedChatModel(
-                              config.chatModelProviders[e.target.value][0],
-                            );
-                          }}
-                          options={Object.keys(config.chatModelProviders).map(
-                            (provider) => ({
-                              value: provider,
-                              label:
-                                provider.charAt(0).toUpperCase() +
-                                provider.slice(1),
-                            }),
-                          )}
-                        />
-                      </div>
-                    )}
+
                     {selectedChatModelProvider &&
                       selectedChatModelProvider != 'custom_openai' && (
                         <div className="flex flex-col space-y-1">
@@ -325,104 +302,6 @@ const SettingsDialog = ({
                           </div>
                         </>
                       )}
-                    {/* Embedding models */}
-                    {config.embeddingModelProviders && (
-                      <div className="flex flex-col space-y-1">
-                        <p className="text-black/70 dark:text-white/70 text-sm">
-                          Embedding model Provider
-                        </p>
-                        <Select
-                          value={selectedEmbeddingModelProvider ?? undefined}
-                          onChange={(e) => {
-                            setSelectedEmbeddingModelProvider(e.target.value);
-                            setSelectedEmbeddingModel(
-                              config.embeddingModelProviders[e.target.value][0],
-                            );
-                          }}
-                          options={Object.keys(
-                            config.embeddingModelProviders,
-                          ).map((provider) => ({
-                            label:
-                              provider.charAt(0).toUpperCase() +
-                              provider.slice(1),
-                            value: provider,
-                          }))}
-                        />
-                      </div>
-                    )}
-                    {selectedEmbeddingModelProvider && (
-                      <div className="flex flex-col space-y-1">
-                        <p className="text-black/70 dark:text-white/70 text-sm">
-                          Embedding Model
-                        </p>
-                        <Select
-                          value={selectedEmbeddingModel ?? undefined}
-                          onChange={(e) =>
-                            setSelectedEmbeddingModel(e.target.value)
-                          }
-                          options={(() => {
-                            const embeddingModelProvider =
-                              config.embeddingModelProviders[
-                                selectedEmbeddingModelProvider
-                              ];
-
-                            return embeddingModelProvider
-                              ? embeddingModelProvider.length > 0
-                                ? embeddingModelProvider.map((model) => ({
-                                    label: model,
-                                    value: model,
-                                  }))
-                                : [
-                                    {
-                                      label: 'No embedding models available',
-                                      value: '',
-                                      disabled: true,
-                                    },
-                                  ]
-                              : [
-                                  {
-                                    label:
-                                      'Invalid provider, please check backend logs',
-                                    value: '',
-                                    disabled: true,
-                                  },
-                                ];
-                          })()}
-                        />
-                      </div>
-                    )}
-                    <div className="flex flex-col space-y-1">
-                      <p className="text-black/70 dark:text-white/70 text-sm">
-                        OpenAI API Key
-                      </p>
-                      <Input
-                        type="text"
-                        placeholder="OpenAI API Key"
-                        defaultValue={config.openaiApiKey}
-                        onChange={(e) =>
-                          setConfig({
-                            ...config,
-                            openaiApiKey: e.target.value,
-                          })
-                        }
-                      />
-                    </div>
-                    <div className="flex flex-col space-y-1">
-                      <p className="text-black/70 dark:text-white/70 text-sm">
-                        Ollama API URL
-                      </p>
-                      <Input
-                        type="text"
-                        placeholder="Ollama API URL"
-                        defaultValue={config.ollamaApiUrl}
-                        onChange={(e) =>
-                          setConfig({
-                            ...config,
-                            ollamaApiUrl: e.target.value,
-                          })
-                        }
-                      />
-                    </div>
                     <div className="flex flex-col space-y-1">
                       <p className="text-black/70 dark:text-white/70 text-sm">
                         GROQ API Key

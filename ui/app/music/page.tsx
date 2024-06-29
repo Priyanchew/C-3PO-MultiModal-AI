@@ -68,7 +68,7 @@ const Page = () => {
                 <iframe
                     src={currentLink}
                     width="100%"
-                    height="950"
+                    height="961"
                 ></iframe>
             </div>
         </>

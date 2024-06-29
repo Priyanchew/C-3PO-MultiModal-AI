@@ -4,34 +4,34 @@ import { useState } from 'react';
 
 const focusModes = [
     {
-        key: 'webSearch',
-        title: 'All',
-        description: 'Searches across all of the internet',
-        link: '/',
+        key: 'Diffusion',
+        title: 'Stable Diffusion',
+        description: 'Genrate images from text',
+        link: 'https://prodia-fast-stable-diffusion.hf.space',
     },
     {
-        key: 'academicSearch',
-        title: 'Academic',
-        description: 'Search in published academic papers',
-        link: '/image',
+        key: 'ImageChat',
+        title: 'Paligemma',
+        description: 'Chat with images',
+        link: 'https://big-vision-paligemma.hf.space',
     },
     {
-        key: 'writingAssistant',
-        title: 'Writing',
-        description: 'Chat without searching the web',
-        link: '/video',
+        key: 'AnotherDiffusion',
+        title: 'Another Stable Diffusion',
+        description: 'Generate images from text',
+        link: 'https://stabilityai-stable-diffusion-3-medium.hf.space',
     },
     {
-        key: 'wolframAlphaSearch',
-        title: 'Wolfram Alpha',
-        description: 'Computational knowledge engine',
-        link: '/music',
+        key: 'imageVariations',
+        title: 'Image Variations',
+        description: 'Stable Diffusion Image Variations',
+        link: 'https://lambdalabs-stable-diffusion-image-variations.hf.space',
     },
     {
-        key: 'youtubeSearch',
-        title: 'Youtube',
-        description: 'Search and watch videos',
-        link: '/discover',
+        key: 'imageEditing',
+        title: 'Image Editing',
+        description: 'Limitless Image Editing using Text-to-Image Models',
+        link: 'https://editing-images-leditsplusplus.hf.space',
     },
 ];
 
@@ -68,7 +68,7 @@ const Page = () => {
                 <iframe
                     src={currentLink}
                     width="100%"
-                    height="950"
+                    height="961"
                 ></iframe>
             </div>
         </>

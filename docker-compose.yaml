@@ -6,8 +6,8 @@ services:
     ports:
       - 4000:8080
     networks:
-      - perplexica-network
+      - network
     restart: unless-stopped
 
 networks:
-  perplexica-network:
+  network:
