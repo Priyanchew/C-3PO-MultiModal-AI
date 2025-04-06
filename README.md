@@ -1,7 +1,3 @@
-Got it! Based on your clarification, here’s a more accurate and complete `README.md` tailored to your project:
-
----
-
 # 🤖 C-3PO MultiModal AI
 
 C-3PO (Compact Plug-and-Play Proxy Optimization) is a **Perplexity-like multi-modal AI assistant** that integrates search, chat, image generation, document parsing, and various Hugging Face models—all in one place.
@@ -114,16 +110,8 @@ Inspired by **Perplexity**, **You.com**, and **ChatGPT**—but open-source, hack
 
 ---
 
-## 🤝 Contributing
-
-PRs and ideas are welcome! Feel free to fork, tweak, and share your creations. If you build something cool using this framework, give us a shoutout!
-
----
-
 ## 📜 License
 
 MIT License
 
 ---
-
-Want badges, GIF demos, or a hosted link added too? Just say the word and I’ll expand this README for publishing perfection.
