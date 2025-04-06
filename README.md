@@ -80,6 +80,12 @@ C-3PO-MultiModal-AI/
 ### 🔧 Prerequisites
 - Node.js, Python 3.9+, Docker
 
+### ⚠️ Requirement: SearxNG Must Be Running
+
+To enable live web search functionality, you **must have a SearxNG instance running** either:
+- Locally using `docker-compose` in the `searxng/` directory
+- Or connect to an existing remote instance by setting the `SEARXNG_HOST` environment variable
+  
 ### 🐳 Spin it up with Docker
 
 ```bash
